@@ -1,0 +1,120 @@
+.filter-modal {
+      background-color: #ffffff;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      bottom: 0;
+      padding: 2rem;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transform: translateX(40rem);
+      transition: 1s;
+      width: 40rem;
+      z-index: 5;
+  }
+  
+  .filter-open {
+      transform: translateX(0);
+  }
+  
+  .close-button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+  }
+  
+  .close-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: block;
+      font-size: 2rem;
+      text-align: center;
+  }
+  
+  .filters-container h2 {
+      font-size: 2.8rem;
+      padding: 3rem 0;
+  }
+  
+  .category-filter-button {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid #d4d1d1;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      font-size: 2.3rem;
+      font-weight: 700;
+      justify-content: space-between;
+      padding: 1rem 0;
+      width: 100%;
+  }
+  
+  .categories-list {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      height: 20rem;
+      padding: 3rem 0;
+      position: fixed;
+      transform: translateY(0);
+      transition: 0.5s;
+      z-index: -1;
+  }
+  
+  .categories-list-open {
+      transform: translateY(-20rem);
+      opacity: 0;
+  }
+  
+  .category-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 2rem;
+      padding: 1rem;
+  }
+  
+  .category-button:hover {
+      text-decoration: underline;
+  }
+  
+  @media (min-width: 992px) {
+      .filter-button-container, .filter-button {
+          height: 0;
+      }
+  
+      .close-button {
+          opacity: 0;
+      }
+  
+      .filter-modal {
+          bottom: 0;
+          left: -40rem;
+          padding: 2rem;
+          position: fixed;
+          top: 12rem;
+          width: 30rem;
+          z-index: 5;
+      }
+  
+      .search-container, .products-list {
+          position: relative;
+          left: 30rem;
+          width: calc(100vw - 30rem);
+      }
+  
+      .products-list .column {
+          width: 100%;
+      }
+  }
+  
+  @media(min-width: 1280px) {
+      .products-list {
+          padding-top: 2rem;
+      }
+  
+      .products-list .column {
+          width: 50%;
+      }
+  }

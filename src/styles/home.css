@@ -1,0 +1,213 @@
+.home-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+      width: 100%;
+  }
+  
+  .search-container {
+      display: block;
+      padding: 0 7rem;
+  }
+  
+  .search-container .form-search {
+      width: 100%;
+  }
+  
+  .form-search input {
+      border: 1.5px solid rgba(0, 0, 0, 0.3);
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      font-size: 2.3rem;
+      height: 3.5rem;
+      width: calc(100% - 3.5rem);
+  }
+  
+  ::placeholder {
+      font-size: 1.8rem;
+      padding-left: 0.5rem;
+  }
+  
+  .form-search {
+      display: flex;
+  }
+  
+  .form-search button {
+      background-color: #e96161;
+      border: none;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      color: #ffffff;
+      height: 3.5rem;
+      width: 3.5rem;
+  }
+  
+  .filter-button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-top: 2rem;
+  }
+  
+  .filter-button {
+      background-color: transparent;
+      border: none;
+      color: #9a9393;
+      cursor: pointer;
+      font-size: 2.3rem;
+      padding: 3rem 0 1.5rem;
+      text-align: right;
+      text-indent: -5rem;
+      width: 20rem;
+  }
+  
+  .column {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 2rem;
+      width: 100%;
+  }
+  
+  .product-card {
+      align-items: center;
+      border: 1.5px solid #c8c0c0;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      height: 58rem;
+      padding: 2rem;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+  }
+  .product-card .underline {
+      text-decoration: none;
+  }
+  
+  .product-card .product-title {
+      border-top: 1.5px solid #c8c0c0;
+      color: #2b2828;
+      height: 8rem;
+      padding-top: 3rem;
+  }
+  
+  .product-card .price {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 3rem;
+  }
+  
+  .product-card:hover {
+      background-color: rgb(238, 245, 245);
+      border: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  .images-hover {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 33rem;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+  }
+  
+  .images-hover img {
+      background-color: transparent;
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+  }
+  
+  .images-hover .over {
+      background: rgb(238, 245, 245);
+      opacity: 0;
+      position: absolute;
+      transition: 0.6s;
+  }
+  
+  .images-hover .over:hover {
+      opacity: 1;
+  }
+  
+  .products-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5rem;
+  }
+  
+  .product-info {
+      border-top: 1px solid rgba(58, 57, 57, 0.3);
+      color: rgb(27, 26, 26);
+      padding: 3rem 1rem 0;
+      width: 100%;
+  }
+  
+  .product-info h2 {
+      font-size: 2.5rem;
+  }
+  
+  .price {
+      color: #9a9393;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 4rem;
+      text-align: left;
+  }
+  
+  .price span {
+      color: rgb(40, 38, 38);
+      font-size: 2.3rem;
+      font-weight: 900;
+      margin-left: 1.5rem;
+  }
+  
+  .add-cart-button {
+      background-color: #e96161;
+      border: none;
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 2.7rem;
+      height: 7rem;
+      position: relative;
+      right: -13rem;
+      bottom: 10rem;
+      width: 7.5rem;
+  }
+  
+  .add-cart-button:hover {
+      background-color: #f04747;
+      cursor: pointer;
+  }
+  
+  
+  @media (min-width: 992px) {
+      .home-container {
+          margin-top: 1.5rem;
+      }
+  
+      .input-container {
+          height: 4.5rem;
+      }
+  
+      .form-search input, .form-search button {
+          height: 4.2rem;
+      }
+      
+      .form-search input {
+          width: calc(100% - 4.2rem);
+      }
+  
+      .form-search button {
+          width: 4.2rem;
+      }
+  
+      .column {
+          width: 50%;
+      }
+  
+      .filter-button {
+          opacity: 0;
+      }
+  }

@@ -1,0 +1,89 @@
+.purchases-container {
+      padding: 2rem 4rem;
+  }
+  
+  .purchases-header {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      font-size: 1.8rem;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      max-width: 20rem;
+  }
+  
+  .purchases-header h3 {
+      font-weight: 400;
+  }
+  
+  .purchases-title {
+      font-size: 4rem;
+      padding: 3rem 0;
+  }
+  
+  .purchases-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+  }
+  
+  .purchase-column {
+      padding: 1.5rem;
+      width: 100%;
+  }
+  
+  .purchase-card {
+      border: 1.5px solid #c8c0c0;
+      border-radius: 1.5rem;
+      height: 100%;
+      width: 100%;
+  }
+  
+  .purchase-date {
+      border-bottom: 1.5px solid #c8c0c0;
+      font-size: 2.2rem;
+      padding: 2rem;
+  }
+  
+  .each-purchase-products {
+      padding: 1rem 4rem;
+  }
+  
+  .purchase-info {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      font-size: 1.9rem;
+      padding: 1rem 0;
+      width: 100%;
+  }
+  
+  .purchase-info li {
+      list-style: none;
+  }
+  
+  .purchase-info .product-name {
+      width: 65%;
+  }
+  
+  .purchase-info .product-quantity {
+      border: 1px solid #c8c0c0;
+      padding: 1rem 3rem;
+      text-align: center;
+      width: 10%;
+  }
+  
+  .purchase-info .product-price {
+      display: flex;
+      flex-direction: row;
+      font-weight: 700;
+      justify-content: flex-end;
+      width: 30%;
+  }
+  
+  @media (min-width: 992px) {
+      .purchase-column {
+          width: 50%;
+      }
+  }
