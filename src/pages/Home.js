@@ -15,7 +15,7 @@ const Home = () => {
     useEffect(() => {
         dispatch(getProductsThunk());
         dispatch(getCategoriesThunk());
-    }, { });
+    },[])
 
     const searchProduct = e => {
         e.preventDefault();

@@ -25,7 +25,7 @@ const ProductDetails = () => {
             .then(res => {
                 const filteredProducts = res.data.data.products.filter(product => product.id !== Number(id));
                 setRelatedProducts(filteredProducts)});
-    }, [ productFound ]);
+    }, [ productFound.id ]);
 
     const addToCart = () => {
         const added = {
