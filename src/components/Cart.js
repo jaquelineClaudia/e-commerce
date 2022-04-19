@@ -9,7 +9,6 @@ const Cart = ({isCartOpen, setIsCartOpen}) => {
     const cartProducts = useSelector(state => state.cartProducts);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const [ checkoutTotal, setCheckoutTotal ] = useState(0);
 
     const clickedProduct = id => {
         navigate(`/product/${id}`)

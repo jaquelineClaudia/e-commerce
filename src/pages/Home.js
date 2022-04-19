@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Filter from '../components/Filter';
 import { addCartThunk, filterByNameThunk, getCategoriesThunk, getProductsThunk } from '../redux/actions';
 import '../styles/home.css';
 
 const Home = () => {
-    const {id} = useParams();
     const dispatch = useDispatch();
     const products = useSelector(state => state.products);    
     const [ searchResult, setSearchResult ] = useState("");
