@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Filter from '../components/Filter';
 import { addCartThunk, filterByNameThunk, getCategoriesThunk, getProductsThunk } from '../redux/actions';
 import '../styles/home.css';
 
 const Home = () => {
+    const { id } = useParams();
     const dispatch = useDispatch();
     const products = useSelector(state => state.products);    
     const [ searchResult, setSearchResult ] = useState("");
@@ -14,7 +15,7 @@ const Home = () => {
     useEffect(() => {
         dispatch(getProductsThunk());
         dispatch(getCategoriesThunk());
-    }, [dispatch]);
+    }, []);
 
     const searchProduct = e => {
         e.preventDefault();
@@ -47,7 +48,7 @@ const Home = () => {
                         className='filter-button'
                         onClick={() => setIsFilterOpen(!isFilterOpen)}
                     >
-                            <i className="fa-solid fa-filter"></i> Filter
+                            <i className="fa-solid fa-filter"></i> Filters
                     </button>
                 </div>
             </div>
@@ -57,7 +58,7 @@ const Home = () => {
             <ul className='products-list' onClick={() => setIsFilterOpen(false)}>
                 {
                     products.length === 0 ? (
-                        <p>WE DON'T FIND A PRODUCT FOR "{searchResult}"</p>
+                        <p>No results for "{searchResult}"</p>
                     ) : (
                         products.map( product => (
                             <li key={product.id} className='column'>

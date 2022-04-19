@@ -67,7 +67,7 @@ const ProductDetails = () => {
                     <h2 className='product-info-title'>{productFound.title}</h2>
                     <div className="price-container">
                         <div className="product-price-det">
-                            <p className='price'>Price <br/><span>$ {productFound.price}</span></p>
+                            <p className='price'>Price<br/><span>$ {productFound.price}</span></p>
                         </div>
                         <div className="quantity-container">
                             <label htmlFor="quantity">Quantity</label>
