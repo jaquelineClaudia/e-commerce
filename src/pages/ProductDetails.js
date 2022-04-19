@@ -20,7 +20,7 @@ const ProductDetails = () => {
     const productFound = products.find(product => product.id === Number(id));
 
     useEffect(() => {
-        /* if(productFound) */
+        
         axios.get(`https://ecommerce-api-react.herokuapp.com/api/v1/products/?category=${productFound.category.id}`)
             .then(res => {
                 const filteredProducts = res.data.data.products.filter(product => product.id !== Number(id));
